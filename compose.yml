@@ -1,0 +1,17 @@
+name: madmallard-backup-proof
+services:
+  synthetic-app:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "${BACKUP_PROOF_PORT:-18080}:8080"
+    volumes:
+      - synthetic-data:/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=2)"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+volumes:
+  synthetic-data:
