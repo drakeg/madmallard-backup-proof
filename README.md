@@ -1,5 +1,8 @@
 # Mad Mallard Backup Proof
 
+[![License](https://img.shields.io/github/license/drakeg/madmallard-backup-proof)](https://github.com/drakeg/madmallard-backup-proof/blob/main/LICENSE)
+
+
 A fixed-scope **Prove Your Backup Works** recovery drill for small agencies.
 
 **Pilot hypothesis:** $349 for one app, one database, one approved snapshot (up to 10 GiB). No production failover, recovery-time guarantee, ongoing monitoring, or out-of-scope repairs.
